@@ -21,6 +21,7 @@ function App() {
         <button className='btn btn-primary' onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <a href="http://localhost:4000" className='btn btn-secondary'>BACKEND</a>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>

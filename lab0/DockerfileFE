@@ -1,0 +1,12 @@
+FROM node:18-alpine
+
+WORKDIR /react-docker-example-fe/
+
+EXPOSE 5173
+
+COPY public/ /react-docker-example-fe/public
+COPY src/ /react-docker-example-fe/src
+COPY package.json /react-docker-example-fe/
+
+RUN npm install
+CMD ["npm", "run", "dev"]

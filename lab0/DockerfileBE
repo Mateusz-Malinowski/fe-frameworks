@@ -1,0 +1,11 @@
+FROM node:18-alpine
+
+WORKDIR /react-docker-example-be/
+
+EXPOSE 8080
+
+COPY package.json /react-docker-example-be/
+COPY server.cjs /react-docker-example-be/
+
+RUN npm install
+CMD ["node", "server.cjs"]

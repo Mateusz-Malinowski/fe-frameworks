@@ -1,0 +1,25 @@
+services:
+  docker-example-fe:
+    build: 
+      context: .
+      dockerfile: DockerfileFE
+    container_name: docker-example-fe
+    ports:
+      - "3000:5173"
+    networks:
+      - my-network
+    depends_on:
+      - docker-example-be
+
+  docker-example-be:
+    build: 
+      context: .
+      dockerfile: DockerfileBE
+    container_name: docker-example-be
+    ports:
+      - "4000:8080"
+    networks:
+      - my-network
+
+networks:
+  my-network:
